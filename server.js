@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 io.on('connection', function (socket) {
     // Deze functie wordt uitgevoerd wanneer een gebruiker
     // met de chatserver is verbonden
-    console.log(countPainters + ' online');
+    //console.log(countPainters + ' online');
  
     // Luister naar een binnenkomend bericht
     socket.on('painterOnline', function (data) {

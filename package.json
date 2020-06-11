@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/saebuabu/artsocket#readme",
   "dependencies": {
-    "express": "^4.15.2",
+    "express": "^4.17.1",
+    "fresh": "^0.5.2",
     "socket.io": "^2.3.0"
   }
 }
