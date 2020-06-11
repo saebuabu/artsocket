@@ -1,0 +1,24 @@
+{
+  "name": "artsocket",
+  "version": "1.0.0",
+  "description": "socket assisted artpainting",
+  "main": "server.js",
+  "scripts": {
+    "test": "hello"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saebuabu/artsocket.git"
+  },
+  "keywords": [
+    "art",
+    "sockets",
+    "node"
+  ],
+  "author": "Abu Saebu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saebuabu/artsocket/issues"
+  },
+  "homepage": "https://github.com/saebuabu/artsocket#readme"
+}
