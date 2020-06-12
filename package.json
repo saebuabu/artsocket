@@ -4,7 +4,7 @@
   "description": "socket assisted artpainting",
   "main": "server.js",
   "scripts": {
-    "test": "hello"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -13,8 +13,12 @@
   "keywords": [
     "art",
     "sockets",
-    "node"
+    "node",
+    "heroku"
   ],
+  "engines": {
+    "node": "10.16.0"
+  },
   "author": "Abu Saebu",
   "license": "MIT",
   "bugs": {
@@ -22,8 +26,10 @@
   },
   "homepage": "https://github.com/saebuabu/artsocket#readme",
   "dependencies": {
+    "bufferutil": "^4.0.1",
     "express": "^4.17.1",
     "fresh": "^0.5.2",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.3.0",
+    "utf-8-validate": "^5.0.2"
   }
 }
