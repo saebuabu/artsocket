@@ -1,7 +1,11 @@
 var app = require('express')();
+
+const cors = require('cors');
+app.use(cors());
+
 var http = require('http').createServer(app);
 var io = require('socket.io')(http, {
-                                        origins: '*'
+                                        origins: '*:*'
                                     });
 
 var countPainters = 0;
