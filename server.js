@@ -4,7 +4,7 @@ var io = require('socket.io')(http);
 
 var countPainters = 0;
 app.get('/', (req, res) => {
-  res.send('<h1>Art sockets rule the world</h1>');
+  res.send('<h1>Art socks rule the world</h1>');
 });
 
 
