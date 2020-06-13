@@ -23,32 +23,32 @@ io.on('connection', function (socket) {
     socket.on('painterOnline', function (data) {
         countPainters++;
         // io.socket.emit = verstuur bericht naar alle verbonden gebruikers
-        io.emit('message',  { message : countPainters + " viewers now online"} );
+        io.emit('message',  { message : countPainters + " viewers now online", action : "" } );
     });
 
     socket.on('painterOffline', function (data) {
         countPainters--;
         // io.socket.emit = verstuur bericht naar alle verbonden gebruikers
-        io.emit('message',  { message : countPainters + " viewers now online"} );
+        io.emit('message',  { message : countPainters + " viewers now online", action: ""} );
     });
 
     
     socket.on('painterStarted', function (data) {
         console.log('painter Started');
         // io.socket.emit = verstuur bericht naar alle verbonden gebruikers
-        io.emit('message',  { message : "session starting"} );
+        io.emit('message',  { message : "viewer inits session" , action: "block" } );
     });
 
     socket.on('painterPainting', function (data) {
         console.log('painter painting '+ data);
         // io.socket.emit = verstuur bericht naar alle verbonden gebruikers
-        io.emit('message',  {message: data + " started painting", painter: data }  );
+        io.emit('message',  {message: data + " started painting", painter: data, action: "block" }  );
     });
 
     socket.on('painterNewPainting', function (data) {
         console.log('new painting');
         // io.socket.emit = verstuur bericht naar alle verbonden gebruikers
-        io.emit('message',  { message : "new painting added"} );
+        io.emit('message',  { message : "new painting added by " + data , action: "refresh"} );
     });
 
 });
