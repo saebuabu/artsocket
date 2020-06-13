@@ -48,7 +48,7 @@ io.on('connection', function (socket) {
     socket.on('painterNewPainting', function (data) {
         console.log('new painting');
         // io.socket.emit = verstuur bericht naar alle verbonden gebruikers
-        io.emit('message',  { message : "new painting added by " + data , action: "refresh"} );
+        io.emit('message',  { message : "new painting added by " + data , action: "refresh", painter: data} );
     });
 
 });
