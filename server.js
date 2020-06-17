@@ -23,20 +23,20 @@ io.on('connection', function (socket) {
     socket.on('painterOnline', function (data) {
         countPainters++;
         // io.socket.emit = verstuur bericht naar alle verbonden gebruikers
-        io.emit('message',  { message : countPainters + " viewers now online", action : "" } );
+        io.emit('message',  { message : countPainters + " viewer(s)", action : "" } );
     });
 
     socket.on('painterOffline', function (data) {
-        countPainters--;
+        countPainters = countPainters > 0 ? countPainters-1 : 1;
         // io.socket.emit = verstuur bericht naar alle verbonden gebruikers
-        io.emit('message',  { message : countPainters + " viewers now online", action: ""} );
+        io.emit('message',  { message : countPainters + " viewers", action: ""} );
     });
 
     
     socket.on('painterStarted', function (data) {
         console.log('painter Started');
         // io.socket.emit = verstuur bericht naar alle verbonden gebruikers
-        io.emit('message',  { message : "viewer inits session" , action: "block" } );
+        io.emit('message',  { message : "viewer starts session" , action: "block" } );
     });
 
     socket.on('painterPainting', function (data) {
